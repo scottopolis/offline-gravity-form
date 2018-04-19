@@ -66,11 +66,11 @@ h1, p {
 	margin-top: 10px;
 }
 
-input, textarea, button {
+.form-field {
 	display: block;
-	width: 300px;
+	width: 400px;
 	clear: both;
-	margin: 5px 0;
+	margin: 10px 0;
 }
 
 textarea {

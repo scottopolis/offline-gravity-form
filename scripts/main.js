@@ -26,11 +26,17 @@
 		var data = {};
 		data.input_values = {};
 
+		// loop over form inputs and put them into the right data format
 		for (var i = 0; i < form.length; i++) {
 
 			if( form[i].classname = 'gf-input' && form[i].id ) {
 				
-				data.input_values[form[i].id] = form[i].value;
+				if( form[i].getAttribute("type") == "radio" && form[i].checked ) {
+					data.input_values[form[i].name] = form[i].value;
+				} else {
+					data.input_values[form[i].id] = form[i].value;
+				}
+				
 			} 
 		}
 

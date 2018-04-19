@@ -23,11 +23,47 @@
       <p>This is a progressive web app that allows you to submit a form offline. Tutorial at <a href="http://scottbolinger.com" target="_blank">scottbolinger.com</a></p>
 
       <form action="#" id="sb_form">
-        <input type="text" id="input_1_3" class="gf-input" placeholder="First Name">
-        <input type="text" id="input_1_6" class="gf-input" placeholder="Last Name">
-        <input type="email" id="input_2" class="gf-input" placeholder="me@mysite.com">
-        <textarea id="input_3" class="gf-input" placeholder="Your message..."></textarea>
-        <button onClick="sbOffline.submitForm(event)">Submit</button>
+
+        <div class="form-field">
+          <input type="text" id="input_1_3" class="gf-input" placeholder="First Name">
+        </div>
+
+        <div class="form-field">
+          <input type="text" id="input_1_6" class="gf-input" placeholder="Last Name">
+        </div>
+
+        <div class="form-field">
+          <input type="email" id="input_2" class="gf-input" placeholder="me@mysite.com">
+        </div>
+
+        <div class="form-field">
+
+          <select name="input_5" id="input_5" class="gf-input">
+            <option value="Not sure">Not sure</option>
+            <option value="To hire you">To hire you</option>
+            <option value="To bug you">To bug you</option>
+          </select>
+
+        </div>
+
+        <div class="form-field">
+
+          <input name="input_6" type="radio" class="gf-input" value="First Choice" id="choice_6_0"> First Choice
+          <input name="input_6" type="radio" class="gf-input" value="Second Choice" id="choice_6_1" tabindex="9"> Second Choice
+          <input name="input_6" type="radio" class="gf-input" value="Third Choice" id="choice_6_2" tabindex="9"> Third Choice
+
+        </div>
+        
+        <div class="form-field">
+
+          <textarea id="input_3" class="gf-input" placeholder="Your message..."></textarea>
+
+        </div>
+
+        <div class="form-field">
+          <button onClick="sbOffline.submitForm(event)">Submit</button>
+        </div>
+        
         <div id="gf-message"></div>
     </form>
     <script src=scripts/offline.min.js></script>
