@@ -1,9 +1,9 @@
 (function() {
 	'use strict';
 
-	// to generate this url, visit Gravity Forms settings in your wp-admin, click Web API, and enable. Under "impersonate account", choose an admin user, and save. Nex, click "open developer tools", then generate a url to your desired form. Add "submissions" to the url like below. Must be https.
+	// Make sure the gravity forms web api is enabled in your settings
 	var app = {
-		url: 'https://appdev.local/gravityformsapi/forms/1/submissions?api_key=f40d139103&signature=i2Yp2o91mx8ZwuM4sM9rEumtRwI%3D&expires=1526780620',
+		url: 'https://appdev.local/gravityformsapi/forms/1/submissions',
 		sendLater: false
 	};
 
