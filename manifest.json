@@ -1,0 +1,10 @@
+{
+  "name": "SB Offline",
+  "short_name": "SB Offline",
+  "icons": [], // add icons here if you want https://developers.google.com/web/fundamentals/web-app-manifest/
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3"
+}

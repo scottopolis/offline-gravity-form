@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang=en-US>
+  <head>
+    <meta charset='utf-8'>
+    <title>SB Offline</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='description' content='A progressive web app example.'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='canonical' href='http://scottbolinger.com/'>
+    <link rel='manifest' href='manifest.json'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='SB Offline'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-mobile-web-app-title' content='SB Offline'>
+    <meta name='theme-color' content='#2196F3'>
+    <link rel='stylesheet' href='styles/main.css'>
+    <link rel='stylesheet' href='styles/offline-chrome.css'>
+  </head>
+  <body>
+    <div id='container'>
+      <h1>Gravity Form Submission Offline</h1>
+
+      <p>This is a progressive web app that allows you to submit a form offline. Tutorial at <a href="http://scottbolinger.com" target="_blank">scottbolinger.com</a></p>
+
+      <form action="#" id="sb_form">
+        <input type="text" id="input_1_3" class="gf-input" placeholder="First Name">
+        <input type="text" id="input_1_6" class="gf-input" placeholder="Last Name">
+        <input type="email" id="input_2" class="gf-input" placeholder="me@mysite.com">
+        <textarea id="input_3" class="gf-input" placeholder="Your message..."></textarea>
+        <button onClick="sbOffline.submitForm(event)">Submit</button>
+        <div id="gf-message"></div>
+    </form>
+    <script src=scripts/offline.min.js></script>
+    <script src=scripts/main.js></script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '/offline-gravity-form/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+    </script>
+  </body>
+</html>
