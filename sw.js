@@ -5,11 +5,11 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
-        `/gravity-offline/index.html?timestamp=${timeStamp}`,
-        `/gravity-offline/styles/main.css?timestamp=${timeStamp}`,
-        `/gravity-offline/styles/offline-chrome.css?timestamp=${timeStamp}`,
-        `/gravity-offline/scripts/offline.min.js?timestamp=${timeStamp}`,
-        `/gravity-offline/scripts/main.js?timestamp=${timeStamp}`
+        `/offline-gravity-form/index.html?timestamp=${timeStamp}`,
+        `/offline-gravity-form/styles/main.css?timestamp=${timeStamp}`,
+        `/offline-gravity-form/styles/offline-chrome.css?timestamp=${timeStamp}`,
+        `/offline-gravity-form/scripts/offline.min.js?timestamp=${timeStamp}`,
+        `/offline-gravity-form/scripts/main.js?timestamp=${timeStamp}`
       ])
           .then(() => self.skipWaiting());
     })
